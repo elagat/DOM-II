@@ -20,14 +20,13 @@ bannerImage.addEventListener('dblclick', event => {
   event.target.style.border = '3px solid pink';
 })
 
-// Change ... on scroll (4)
+// Change ... on scroll (5)
 
-// window.addEventListener('scroll', event => {
-//   document.querySelector('home intro img').style.opacity = '0.2';
-//
-// });
+window.addEventListener('scroll', event => {
+  alert('You are scrolling');
+});
 
-// Change h1 title on drag (5)
+// Change h1 title on drag (6)
 
 let title = document.querySelector('h1');
 title.addEventListener('drag', event => {
@@ -39,4 +38,11 @@ title.addEventListener('drag', event => {
 // let titleSmall = document.querySelectorAll('h2');
 // titleSmall.addEventListener('keydown', event => {
 //   event.target.style.color = 'dodgerblue';
+// })
+
+// Change h2 titles on drop
+
+// let button = document.querySelectorAll('btn');
+// pinkHouse.addEventListener('drop', event => {
+//   event.target.style.border = '3px solid dodgerblue';
 // })
