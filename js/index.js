@@ -9,6 +9,11 @@ navColor.addEventListener('mouseout', event => {
   event.target.style.color = 'pink';
 });
 
+//Stop nav items from refreshing Page
+ navColor.addEventListener('click', event => {
+   event.preventDefault();
+ });
+
 // Change banner image on click & doubleclick (3, 4)
 
 let bannerImage = document.querySelector('img');
@@ -20,7 +25,7 @@ bannerImage.addEventListener('dblclick', event => {
   event.target.style.border = '3px solid pink';
 })
 
-// Change ... on scroll (5)
+// Alert on scroll (5)
 
 window.addEventListener('scroll', event => {
   alert('You are scrolling');
@@ -33,16 +38,35 @@ title.addEventListener('drag', event => {
   event.target.textContent = 'Funny Bus';
 });
 
-// Change h2 titles on keydown (6)
+// Alert on load (7)
 
-// let titleSmall = document.querySelectorAll('h2');
-// titleSmall.addEventListener('keydown', event => {
-//   event.target.style.color = 'dodgerblue';
-// })
+window.addEventListener('load', event => {
+  alert('Page is fully loaded');
+});
 
-// Change h2 titles on drop
+// Alert on keydown (8)
 
-// let button = document.querySelectorAll('btn');
-// pinkHouse.addEventListener('drop', event => {
-//   event.target.style.border = '3px solid dodgerblue';
-// })
+window.addEventListener('keydown', event => {
+  alert('You have pressed a key');
+});
+
+// Change buttons on wheel (9)
+
+let button = document.querySelectorAll('btn');
+button.addEventListener('mouseover', event => {
+  event.target.style.backgroundColor = 'pink';
+});
+
+// Alert on copy (10)
+
+source.addEventListener('copy', event => {
+  alert('Copy that')
+});
+
+// Nest and prevent propagation
+
+let buttonDiv = document.getElementsByClassName('destination');
+buttonDiv.addEventListener('mouseover', event => {
+  event.target.style.background = 'dodgerblue';
+  event.preventDefault;
+});
